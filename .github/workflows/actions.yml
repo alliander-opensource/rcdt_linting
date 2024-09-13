@@ -38,15 +38,15 @@ jobs:
         uses: fsfe/reuse-action@v4
 
   ruffmore:
-      runs-on: ubuntu-latest 
-      steps:
-      - uses: actions/checkout@v4
-        with:
-          path: main
-     - uses: actions/checkout@v4
-        with:
-          repository: "alliander-opensource/rcdt_public"
-          path: "rcdt_public"
-          ref: "main"
-      - uses: actions/setup-python@v2
-      - run: pip install ruff
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        path: main
+    - uses: actions/checkout@v4
+      with:
+        repository: "alliander-opensource/rcdt_public"
+        path: "rcdt_public"
+        ref: "main"
+    - uses: actions/setup-python@v2
+    - run: pip install ruff
