@@ -23,7 +23,7 @@ jobs:
         repository: "alliander-opensource/rcdt_public"
         path: "rcdt_public"
         ref: "main"
-    - uses: actions/setup-python@v3
+    - uses: actions/setup-python@v5
     - run: pip install ruff
     - run: ruff check main
     - run: ruff check --config rcdt_public/pyproject.toml main
