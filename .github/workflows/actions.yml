@@ -37,7 +37,13 @@ jobs:
         uses: fsfe/reuse-action@v4
 
   ruffmore:
-    runs-on: ubuntu-latest
-      - run: poetry install --with dev
-      - run: poetry run scons ruff format --check main
-      - run: poetry run scons ruff check --config rcdt_public/pyproject.toml main
+      runs-on: ubuntu-latest 
+      steps:
+      - uses: actions/checkout@v4
+        with:
+          path: main
+      - uses: actions/setup-python@v2
+      - run: pip install ruff
+      - run: | 
+        ruff format --check main .
+        ruff check --config rcdt_public/pyproject.toml main .
