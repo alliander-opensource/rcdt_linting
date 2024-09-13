@@ -23,10 +23,10 @@ jobs:
           repository: "alliander-opensource/rcdt_public"
           path: "rcdt_public"
           ref: "main"
-      - uses: alliander-opensource/ruff-action
+      - uses: alliander-opensource/ruff-action@v1
         with:
           args: format --check main
-      - uses: alliander-opensource/ruff-action
+      - uses: alliander-opensource/ruff-action@v1
         with:
           args: check --config rcdt_public/pyproject.toml main
   reuse:
