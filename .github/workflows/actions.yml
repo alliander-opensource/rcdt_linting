@@ -51,4 +51,4 @@ jobs:
     - uses: actions/setup-python@v2
     - run: pip install ruff
     - run: ruff check main
-    - run: ruff check --config rcdt_public/pyproject.toml .
+    - run: ruff check --config rcdt_public/pyproject.toml main
