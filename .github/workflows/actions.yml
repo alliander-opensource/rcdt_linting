@@ -50,5 +50,4 @@ jobs:
         ref: "main"
     - uses: actions/setup-python@v2
     - run: pip install ruff
-    - run: | 
-      ruff check .
+    - run: ruff check .
