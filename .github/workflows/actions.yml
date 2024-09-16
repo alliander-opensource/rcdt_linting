@@ -20,13 +20,13 @@ jobs:
         path: main
     - uses: actions/checkout@v4
       with:
-        repository: "alliander-opensource/rcdt_public"
-        path: "rcdt_public"
+        repository: "alliander-opensource/rcdt_linting"
+        path: "rcdt_linting"
         ref: "main"
     - uses: actions/setup-python@v5
     - run: pip install ruff
     - run: ruff check main
-    - run: ruff check --config rcdt_public/pyproject.toml main
+    - run: ruff check --config rcdt_linting/config/pyproject.toml main
 
   reuse:
     runs-on: ubuntu-latest
