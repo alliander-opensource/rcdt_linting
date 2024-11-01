@@ -24,7 +24,9 @@ jobs:
         path: "rcdt_linting"
         ref: "main"
     - uses: actions/setup-python@v5
-    - run: pip install ruff --break-system-packages
+      with:
+            python-version: "3.10"
+    - run: pip install ruff
     - run: ruff format --check main
     - run: ruff check --config rcdt_linting/config/pyproject.toml main
 
